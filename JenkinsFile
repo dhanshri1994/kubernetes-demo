@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+                git 'https://github.com/dhanshri1994/kubernetes-demo.git'
+            }
+        }
+        stage('deploy'){
+            steps{
+                script {
+                    withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
+                    sh ('/var/jenkins_home/kubectl apply -f  config-map.yaml')
+                    sh ('/var/jenkins_home/kubectl apply -f  mongo-secret.yaml')
+                    sh ('/var/jenkins_home/kubectl apply -f  mongo-db-deployment.yaml')
+                    sh ('/var/jenkins_home/kubectl apply -f  mongo-db-deployment.yaml')
+                    }
+                }
+            }
+        }
+    }
+}
