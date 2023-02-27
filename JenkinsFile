@@ -14,7 +14,7 @@ pipeline {
                     sh ('/var/jenkins_home/kubectl apply -f  config-map.yaml')
                     sh ('/var/jenkins_home/kubectl apply -f  mongo-secret.yaml')
                     sh ('/var/jenkins_home/kubectl apply -f  mongo-db-deployment.yaml')
-                    sh ('/var/jenkins_home/kubectl apply -f  mongo-db-deployment.yaml')
+                    sh ('/var/jenkins_home/kubectl apply -f  mongo-express-deployment.yaml')
                     }
                 }
             }
