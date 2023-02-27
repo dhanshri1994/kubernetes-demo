@@ -31,7 +31,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: mongodb-host
-                key: mongodb-service
+                key: mongodb-host
 
 ---
 apiVersion: v1
