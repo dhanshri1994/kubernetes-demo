@@ -15,7 +15,7 @@ spec:
       - name: mongo-express
         image: mongo-express
         ports:
-        - containerPort: 32000
+        - containerPort: 8081
         env:
           - name: ME_CONFIG_MONGODB_ADMINUSERNAME
             valueFrom:
@@ -43,7 +43,7 @@ spec:
     app: mongo-express
   ports:
   - port: 32000
-    targetPort: 32000
+    targetPort: 8081
     nodePort: 32001
   type: NodePort
    
