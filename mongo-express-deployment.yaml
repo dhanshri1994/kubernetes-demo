@@ -42,7 +42,7 @@ spec:
   selector:
     app: mongo-express
   ports:
-  - port: 34000
+  - port: 32000
     targetPort: 32000
     nodePort: 32001
   type: NodePort
