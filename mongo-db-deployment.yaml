@@ -37,7 +37,7 @@ spec:
   selector:
     app: mongo-db
   ports:
-  - port: 8000
+  - port: 27017
     targetPort: 27017
 
 
